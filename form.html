@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="title">Shrnutí Objednávky</div>
+    <div class="products">
+        <table class="products_table">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th></th>
+                    <th>Cena</th>
+                    <th>Počet</th>
+                </tr>
+            </thead>
+            <tbody class="tbody_products">
+                <!-- The products will be dynamically added here -->
+            </tbody>
+        </table>
+        <h6>Celková cena je: <span id="total_price"></span></h6>
+    </div>
+    <div class="title">Dodací Údaje</div>
+    <form id="orderForm" onsubmit="sendForm(); return false;">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Jméno a příjmení</span>
+                <input type="text" id="name" placeholder="Zadejte Vaše Jméno" required>
+            </div>
+            <div class="input-box">
+                <span class="details">E-mail</span>
+                <input type="email" id="email" placeholder="Zadejte Váš E-Mail" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Telefonní Číslo</span>
+                <input type="text" id="phone" placeholder="Zadejte Vaše Tel. Číslo" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Město</span>
+                <input type="text" id="city" placeholder="Zadejte Město" required>
+            </div>
+            <div class="input-box">
+                <span class="details">PSČ</span>
+                <input type="text" id="zip" placeholder="Zadejte Vaše PSČ" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Adresa</span>
+                <input type="text" id="address" placeholder="Zadejte Vaši Adresu" required>
+            </div>
+            <div class="submit-button-wrapper select-style">
+                <span class="details">Přepravní služba</span>
+                <select id="transport" name="transport" required>
+                    <option value="zasilkovna">Zásilkovna</option>
+                    <option value="balikovna">Balíkovna</option>
+                    <option value="ppl">PPL</option>
+                    <option value="ceska-posta">Česká Pošta</option>
+                </select>
+            </div>
+            <div class="checkboxes">
+                <div class="">
+                    <span class="details">Zabalení Na Video</span>
+                    <input type="checkbox" id="video" placeholder="Zadejte Vaši Adresu">
+                </div>
+                <div class="">
+                    <span class="details">Dárkové Balení (+7CZK)</span>
+                    <input type="checkbox" id="gift_package" placeholder="Zadejte Vaši Adresu">
+                </div>
+                <div class="gdpr" title="Souhlas je nutný k uskutečnění objednávky.">
+                    <span class="details">Souhlasím s Obchodními Podmínkami a Zpracováním Osobních Údajů</span>
+                    <input type="checkbox" id="gdpr" placeholder="Zadejte Vaši Adresu">
+                </div>
+            </div>
+
+            <div class="submit-button-wrapper">
+                <input type="submit" value="Odeslat Objednávku">
+            </div>
+        </div>
+    </form>
+</div>
